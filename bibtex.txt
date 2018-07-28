@@ -1,0 +1,6 @@
+@article{sanakoyeu2018styleaware,
+  title={A Style-Aware Content Loss for Real-time HD Style Transfer},
+  author={Sanakoyeu, Artsiom, and Kotovenko, Dmytro, and Lang, Sabine, and Ommer, Bj\"orn},
+  journal={arXiv preprint arXiv:1807.10201},
+  year={2018}
+}

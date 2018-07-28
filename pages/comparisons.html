@@ -1,0 +1,777 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-24712354-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-24712354-2');
+    </script>
+
+
+    <title>AdaStyle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta property="og:image" content="images/eccv_pipeline_diagram_new_symbols_v2_4.jpg">
+    <meta property="og:title" content="A Style-Aware Content Loss for Real-time HD Style Transfer">
+
+
+    <script type="text/javascript">
+        // redefining default features
+        var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
+    </script>
+    <link media="all" href="../css/mainstyles.css" type="text/css" rel="StyleSheet">
+    <style type="text/css" media="all">
+        IMG {
+            PADDING-RIGHT: 0px;
+            PADDING-LEFT: 0px;
+            FLOAT: right;
+            PADDING-BOTTOM: 0px;
+            PADDING-TOP: 0px
+        }
+        #primarycontent {
+            MARGIN-LEFT: auto; ; WIDTH: expression(document.body.clientWidth >
+        1000? "1000px": "auto" ); MARGIN-RIGHT: auto; TEXT-ALIGN: left; max-width:
+        1750px }
+        BODY {
+            TEXT-ALIGN: center
+        }
+/*
+        td:hover {
+            background-color: #00f;
+        }
+*/
+        td.ours  {
+/*            margin-left: 10px*/
+/*            background-color: #000;*/
+/*            border-width: 20px;*/
+/*            border-color: blue*/
+/*            border-left: 3px solid black;*/
+/*            outline: 2px solid black;*/
+        }
+        table { border-collapse: collapse; 
+        }
+        tr { border: none; }
+        td {
+            PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-COLLAPSE: collapse; border-spacing: 0
+        }
+        td.ours {
+          border-right: solid 4px #000; 
+          border-left: solid 4px #000;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="sidebar">
+    <h3>A Style-Aware Content Loss for Real-time HD Style Transfer</h3>
+</div>
+<div class="navigation">
+    <a href="../index.html"> Home </a> /
+    <a href="" onclick="goBack()">Back</a>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> 
+</div>
+    
+<div id="primarycontent">
+<center><h2>Extra comparison</h2>
+<p>
+Comparison of our method against previouis work using different styles and one content image.
+</p>
+</center>
+<div style="overflow:hidden;" align="left">
+<table cellspacing="0" cellpadding="0" border="0" >
+    <tr align="center">
+    <p><b>Content</b></p>
+    </tr>
+    <tr>
+        <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_content.jpg">
+                <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_content.jpg" style="width:12.5%; float:left">
+        </a>
+    </tr>
+</table>
+</div>
+<p>&nbsp;</p>
+    
+    <table border="0" style="table-layout: fixed;">
+      <tr>
+        <th>
+          <p>
+            <span>Style</span>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>Ours</span>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>Gatys et al. </span>
+            <a href="#references">
+              <span>[1]</span>
+            </a>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>CycleGAN </span>
+            <a href="#references">
+              <span>[2]</span>
+            </a>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>PatchBased </span>
+            <a href="#references">
+              <span>[3]</span>
+            </a>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>AdaIn </span>
+            <a href="#references">
+              <span>[4]</span>
+            </a>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>WCT </span>
+            <a href="#references">
+              <span>[5]</span>
+            </a>
+          </p>
+        </th>
+        <th>
+          <p>
+            <span>Johnson et al. </span>
+            <a href="#references">
+              <span>[6]</span>
+            </a>
+          </p>
+        </th>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/el-greco_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/el-greco_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_el-greco-the-resurrection-1595.jpg!HD_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/ernst-ludwig-kirchner_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/ernst-ludwig-kirchner_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_ernst-ludwig-kirchner_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_ernst-ludwig-kirchner_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_ernst-ludwig-kirchner_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_ernst-ludwig-kirchner_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_ernst-ludwig-kirchner_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_ernst-ludwig-kirchner_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kirchner-1913-street-berlin.jpg!HD_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/berthe-morisot_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/berthe-morisot_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/claude-monet_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/claude-monet_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_claude-monet_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_claude-monet_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_claude-monet_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_claude-monet_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_claude-monet_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_claude-monet_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_monet-1914-water-lilies-37.jpg!HD_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/paul-cezanne_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/paul-cezanne_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-cezanne_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-cezanne_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-cezanne_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-cezanne_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-cezanne_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-cezanne_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_still-life-with-apples-1894.jpg!HD_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/samuel-peploe_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/samuel-peploe_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_samuel-peploe_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_samuel-peploe_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_samuel-peploe_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_samuel-peploe_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_samuel-peploe_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_samuel-peploe_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_peploe-ile-de-brehat-1911-1_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/camille-pissarro_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/camille-pissarro_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_camille-pissarro_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_camille-pissarro_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_camille-pissarro_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_camille-pissarro_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_camille-pissarro_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_camille-pissarro_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_rue-saint-lazare-under-snow-1897_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/wassily-kandinsky_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/wassily-kandinsky_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_wassily-kandinsky_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_wassily-kandinsky_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_wassily-kandinsky_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_wassily-kandinsky_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_wassily-kandinsky_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_wassily-kandinsky_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Kandinsky-improvisation-28-second-version-1912_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/jackson-pollock_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/jackson-pollock_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_jackson-pollock_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_jackson-pollock_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_jackson-pollock_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_jackson-pollock_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_jackson-pollock_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_jackson-pollock_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Pollock-number-one-moma-November-31-1950-1950_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/paul-gauguin_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/paul-gauguin_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-gauguin_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-gauguin_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-gauguin_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-gauguin_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-gauguin_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_paul-gauguin_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Gauguin-the-seed-of-the-areoi-1892_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/pablo-picasso_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/pablo-picasso_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_pablo-picasso_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_pablo-picasso_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_pablo-picasso_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_pablo-picasso_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_pablo-picasso_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_pablo-picasso_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_weeping-woman-1937_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/berthe-morisot_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/berthe-morisot_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_berthe-morisot_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Morisot-1886-the-lesson-in-the-garden_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/william-turner_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/william-turner_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_william-turner_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_william-turner_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_william-turner_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_william-turner_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_william-turner_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_william-turner_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_Turner-1842-storm-seam-boat-off-a-harbour-s-mouth-making-signals-in-shallow-water-and-going-by-the-lead_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/vincent-van-gogh_ref_style.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/vincent-van-gogh_ref_style.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="ours" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_ours.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_ours.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_gatys.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_gatys.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_cyclegan.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_cyclegan.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_patchbased.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_patchbased.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_adain.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_adain.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_wct.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_wct.jpg" style="width:100%">
+          </a>
+        </td>
+        <td class="" halign="center" style="word-wrap: break-word;" valign="top">
+          <a href="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_johnson.jpg">
+            <img src="../images/experiments/comparison_with_others/0086/Places365_val_00012321_stylized_vincent-van-gogh_road-with-cypresses-1890_johnson.jpg" style="width:100%">
+          </a>
+        </td>
+      </tr>
+    </table>
+
+<div id="references">
+<h2>References</h2>
+[1] Leon Gatys, Alexander Ecker, Matthias Bethge "Image style transfer using convolutional neural networks", in CVPR 2016.<br>
+[2] Jun-Yan Zhu, Taesung Park, Phillip Isola, Alexei A. Efros <a href="https://arxiv.org/abs/1703.10593">"Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks"</a>, in ICCV 2017.<br>
+[3] Tian Qi Chen, Mark Schmidt <a href="https://arxiv.org/abs/1612.04337">"Fast patch-based style transfer of arbitrary style"</a>, arXiv:1612.04337 <br>
+[4] Xun Huang, Serge Belongie "Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization", in ICCV 2017.<br>
+[5] Li, Y., Fang, C., Yang, J., Wang, Z., Lu, X., Yang, M.H. "Universal style transfer via feature transforms", in NIPS 2017.<br>
+[6] Justin Johnson,  Alexandre Alahi, Li Fei-Fei "Perceptual losses for real-time style transfer and super-resolution", in ECCV 2016.<br>
+</div>
+    
+<p>&nbsp;</p>
+<div class="footer">
+    <div class="contact">
+      <p>
+        Artsiom Sanakoyeu, Dmytro Kotovenko, Sabine Lang, Björn Ommer       
+      </p>
+    </div>
+</div>
+
+
+</div></body></html>
