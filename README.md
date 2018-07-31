@@ -3,4 +3,4 @@ Artsiom Sanakoyeu*, Dmytro Kotovenko*, Sabine Lang, Björn Ommer
 Heidelberg University  
 In ECCV 2018 (Oral)
 
-### Source code coming soon.
+### Source code and pretrained models are coming soon.
