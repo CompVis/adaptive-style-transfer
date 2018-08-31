@@ -75,7 +75,7 @@ high-res train dataset images(105GB). Please specify path to it using the parame
 _path_to_content_dataset_.
 
 The dataset representing a particular artistic period of Vincent van Gogh (it was automatically collected using "Road with Cypress and Star, 1890" painting as query) can be 
-downloaded from [here](https://hcicloud.iwr.uni-heidelberg.de/remote.php/webdav/adastyle/data/vincent-van-gogh_road-with-cypresses-1890.tar.gz), extract corresponding folder to the folder
+downloaded from [here](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=vincent-van-gogh_road-with-cypresses-1890.tar.gz), extract corresponding folder to the folder
 `./data/`.   
 
 Now we can launch the training process:
@@ -91,7 +91,7 @@ CUDA_VISIBLE_DEVICES=1 python main.py \
                  --ptad=./data/vincent-van-gogh_road-with-cypresses-1890/
 ```                 
     
-We also provide style images we've used to train Claude Monet model: [monet_water-lilies-1914.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/remote.php/webdav/adastyle/data/monet_water-lilies-1914.tar.gz).  
+We also provide style images we've used to train Claude Monet model: [monet_water-lilies-1914.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=monet_water-lilies-1914.tar.gz).  
 ### Video.
 Coming soon.
 
