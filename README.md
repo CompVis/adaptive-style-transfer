@@ -8,7 +8,7 @@ In ECCV 2018 (Oral)
 
 
 [![example](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart_2048px.jpg "Stylization")](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart.jpg)
-Please click on image for HiRes results.
+Please click on image for [HiRes results](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart.jpg).
 **Website**: https://compvis.github.io/adaptive-style-transfer   
 **Paper**: https://arxiv.org/abs/1807.10201
 
