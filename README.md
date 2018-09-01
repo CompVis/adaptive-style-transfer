@@ -7,7 +7,7 @@ In ECCV 2018 (Oral)
 ![pipeline](https://compvis.github.io/adaptive-style-transfer/images/eccv_pipeline_diagram_new_symbols_v2_4.jpg "Method pipeline")
 
 
-[![example](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart_2048px.jpg "Stylization")](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart.jpg)
+[![example](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart_1024px.jpg "Stylization")](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart.jpg)
 Please click on image for [HiRes results](https://compvis.github.io/adaptive-style-transfer/images/adaptive-style-transfer_chart.jpg).
 **Website**: https://compvis.github.io/adaptive-style-transfer   
 **Paper**: https://arxiv.org/abs/1807.10201
