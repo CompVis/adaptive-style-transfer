@@ -93,6 +93,12 @@ parser.add_argument('--flw',
                     type=float,
                     default=100.,
                     help='Weight of feature loss.')
+parser.add_argument('--dsr',
+                    dest='discr_success_rate',
+                    type=float,
+                    default=0.8,
+                    help='Rate of trials that discriminator will win on average.')
+
 
 # ========================= INFERENCE PARAMETERS ========================= #
 parser.add_argument('--ii_dir',
@@ -111,11 +117,6 @@ parser.add_argument('--ckpt_nmbr',
                     default=None,
                     help='Checkpoint number we want to use for inference. '
                          'Might be None(unspecified), then the latest available will be used.')
-parser.add_argument('--dsr',
-                    dest='discr_success_rate',
-                    type=float,
-                    default=0.8,
-                    help='Rate of trials that discriminator will win on average.')
 
 args = parser.parse_args()
 
