@@ -134,15 +134,15 @@ class Artgan(object):
                               tf.add_n(self.output_photo_discr_loss.values())
 
             # Compute discriminator accuracies.
-            self.input_painting_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.ones_like(pred)*0.5),
+            self.input_painting_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.zeros_like(pred)),
                                                                          dtype=tf.float32)) * scale_weight[key]
                                              for key, pred in zip(self.input_painting_discr_predictions.keys(),
                                                                   self.input_painting_discr_predictions.values())}
-            self.input_photo_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred < tf.ones_like(pred)*0.5),
+            self.input_photo_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred < tf.zeros_like(pred)),
                                                                       dtype=tf.float32)) * scale_weight[key]
                                           for key, pred in zip(self.input_photo_discr_predictions.keys(),
                                                                self.input_photo_discr_predictions.values())}
-            self.output_photo_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred < tf.ones_like(pred)*0.5),
+            self.output_photo_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred < tf.zeros_like(pred)),
                                                                        dtype=tf.float32)) * scale_weight[key]
                                            for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                 self.output_photo_discr_predictions.values())}
@@ -160,7 +160,7 @@ class Artgan(object):
             self.gener_loss = tf.add_n(self.output_photo_gener_loss.values())
 
             # Compute generator accuracies.
-            self.output_photo_gener_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.ones_like(pred)*0.5),
+            self.output_photo_gener_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.zeros_like(pred)),
                                                                        dtype=tf.float32)) * scale_weight[key]
                                            for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                 self.output_photo_discr_predictions.values())}
