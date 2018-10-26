@@ -98,6 +98,23 @@ CUDA_VISIBLE_DEVICES=1 python main.py \
 How calculate **Deception Score** and where to download artist classification model is described in [evaluation](evaluation).
 
 We also provide style images we've used to train Claude Monet model: [monet_water-lilies-1914.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=monet_water-lilies-1914.tar.gz).  
+
 ### Video.
 Coming soon.
+To stylize a video you can use the following script:
+
+```
+# split video on a set of frames
+ffmpeg -i myvideo.mp4 -r 25 -f image2 image-%04d.png
+
+CUDA_VISIBLE_DEVICES=0 python main.py \
+--model_name=model_van-gogh \
+--phase=inference \
+--image_size=1280 \
+--ii_dir=input \
+--save_dir=output
+
+# reassemble the video back from frames:
+ffmpeg -i image-%04d_stylized.jpg kktie-out.mp4
+```
 
