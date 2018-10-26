@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+*.hdf5
+*.zip
+models
+logs
+evaluation/evaluation_data

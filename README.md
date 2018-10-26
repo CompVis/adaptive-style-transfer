@@ -93,7 +93,10 @@ CUDA_VISIBLE_DEVICES=1 python main.py \
                  --ptcd=/path/to/Places2/data_large \
                  --ptad=./data/vincent-van-gogh_road-with-cypresses-1890/
 ```                 
-    
+
+### Evaluation
+How calculate **Deception Score** and where to download artist classification model is described in [evaluation](evaluation).
+
 We also provide style images we've used to train Claude Monet model: [monet_water-lilies-1914.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=monet_water-lilies-1914.tar.gz).  
 ### Video.
 Coming soon.
