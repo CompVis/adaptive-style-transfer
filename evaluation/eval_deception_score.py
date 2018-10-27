@@ -58,7 +58,7 @@ def create_slim_extractor(cli_params):
     extractor_class = SlimFeatureExtractor
     extractor_ = extractor_class(cli_params['net'], cli_params['snapshot_path'],
                                  should_restore_classifier=True,
-                                 gpu_memory_fraction=0.5,
+                                 gpu_memory_fraction=0.95,
                                  vgg_16_heads=None if cli_params['net'] != 'vgg_16_multihead' else {'artist_id': cli_params['num_classes']})
     return extractor_
 
