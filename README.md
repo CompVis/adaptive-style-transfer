@@ -73,10 +73,10 @@ Extract models to the folder `./models/`.
 
 Content images used for training: [Places365-Standard high-res train mages (105GB)](http://data.csail.mit.edu/places/places365/train_large_places365standard.tar).  
 
-Style images used for training ([all](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf)):
-- Vincent van Gogh style: [vincent-van-gogh_road-with-cypresses-1890.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=vincent-van-gogh_road-with-cypresses-1890.tar.gz).  
+Style images used for training the aforementioned models: [download link](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf).  
+
+- For example, Vincent van Gogh style: [vincent-van-gogh_road-with-cypresses-1890.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=vincent-van-gogh_road-with-cypresses-1890.tar.gz).  
 This is the dataset representing a particular artistic period of Vincent van Gogh and was automatically collected using "Road with Cypress and Star, 1890" painting as query.
-- Claude Monet style: [monet_water-lilies-1914.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=monet_water-lilies-1914.tar.gz).  
 
 
 1. Download and extract style archives in folder `./data`.   
