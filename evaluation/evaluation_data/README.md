@@ -1,4 +1,4 @@
-### Data descrition
+### Data description
 
 - **eval_paths_700_val.json** - list of paths to the images from MSCOCO and Plcae365 datasets used for stylization and computation of the deception score.
 
