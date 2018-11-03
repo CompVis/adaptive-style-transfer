@@ -9,3 +9,8 @@ Image filenames must be in format `"{content_name}_stylized_{artist_name}.jpg"`,
 3. Run `./run_deception_score_vgg_16_wikiart.sh` 
 4. Read results in the log file in `./logs` directory.
 
+
+### How to evaluate your own model:
+
+- Download validation sets from MSCOCO ([val2017.zip](http://images.cocodataset.org/zips/val2017.zip)) and Places365 ([val_large.tar](http://data.csail.mit.edu/places/places365/val_large.tar)).
+- To compare with deception score reported in the paper run your stylization model on the content images listed in [eval_paths_700_val.json](evaluation_data/eval_paths_700_val.json).
