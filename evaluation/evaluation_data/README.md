@@ -1,3 +1,7 @@
+### Data descrition
+
+- **eval_paths_700_val.json** - list of paths to the images from MSCOCO and Plcae365 datasets used for stylization and computation of the deception score.
+
 #### The files which will be automatically downloaded by script:
 
 - **model.ckpt-790000**: checkpoint of the VGG-16 network which was trained from scratch to predict artist of the painting.  
