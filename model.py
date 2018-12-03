@@ -146,8 +146,6 @@ class Artgan(object):
                                             for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                  self.output_photo_discr_predictions.values())}
 
-#            print(list(self.input_painting_discr_loss.values()))
- #           tf.add_n(list(self.input_painting_discr_loss.values()))
 
             self.discr_loss = tf.add_n(list(self.input_painting_discr_loss.values())) + \
                               tf.add_n(list(self.input_photo_discr_loss.values())) + \
