@@ -146,9 +146,9 @@ class Artgan(object):
                                             for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                  self.output_photo_discr_predictions.values())}
 
-            self.discr_loss = tf.add_n(self.input_painting_discr_loss.values()) + \
-                              tf.add_n(self.input_photo_discr_loss.values()) + \
-                              tf.add_n(self.output_photo_discr_loss.values())
+            self.discr_loss = tf.add_n(list(self.input_painting_discr_loss.values())) + \
+                              tf.add_n(list(self.input_photo_discr_loss.values())) + \
+                              tf.add_n(list(self.output_photo_discr_loss.values()))
 
             # Compute discriminator accuracies.
             self.input_painting_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.zeros_like(pred)),
@@ -163,9 +163,9 @@ class Artgan(object):
                                                                        dtype=tf.float32)) * scale_weight[key]
                                            for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                 self.output_photo_discr_predictions.values())}
-            self.discr_acc = (tf.add_n(self.input_painting_discr_acc.values()) + \
-                              tf.add_n(self.input_photo_discr_acc.values()) + \
-                              tf.add_n(self.output_photo_discr_acc.values())) / float(len(scale_weight.keys())*3)
+            self.discr_acc = (tf.add_n(list(self.input_painting_discr_acc.values())) + \
+                              tf.add_n(list(self.input_photo_discr_acc.values())) + \
+                              tf.add_n(list(self.output_photo_discr_acc.values()))) / float(len(scale_weight.keys())*3)
 
 
             # Generator.
@@ -174,7 +174,7 @@ class Artgan(object):
                                             for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                  self.output_photo_discr_predictions.values())}
 
-            self.gener_loss = tf.add_n(self.output_photo_gener_loss.values())
+            self.gener_loss = tf.add_n(list(self.output_photo_gener_loss.values()))
 
             # Compute generator accuracies.
             self.output_photo_gener_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.zeros_like(pred)),
@@ -182,7 +182,7 @@ class Artgan(object):
                                            for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                 self.output_photo_discr_predictions.values())}
 
-            self.gener_acc = tf.add_n(self.output_photo_gener_acc.values()) / float(len(scale_weight.keys()))
+            self.gener_acc = tf.add_n(list(self.output_photo_gener_acc.values())) / float(len(scale_weight.keys()))
 
 
             # Image loss.
