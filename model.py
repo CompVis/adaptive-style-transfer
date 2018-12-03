@@ -1,20 +1,3 @@
-# Copyright (C) 2018  Artsiom Sanakoyeu and Dmytro Kotovenko
-#
-# This file is part of Adaptive Style Transfer
-#
-# Adaptive Style Transfer is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# Adaptive Style Transfer is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 from __future__ import division
 from __future__ import print_function
 
@@ -146,9 +129,12 @@ class Artgan(object):
                                             for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                  self.output_photo_discr_predictions.values())}
 
-            self.discr_loss = tf.add_n(self.input_painting_discr_loss.values()) + \
-                              tf.add_n(self.input_photo_discr_loss.values()) + \
-                              tf.add_n(self.output_photo_discr_loss.values())
+#            print(list(self.input_painting_discr_loss.values()))
+ #           tf.add_n(list(self.input_painting_discr_loss.values()))
+
+            self.discr_loss = tf.add_n(list(self.input_painting_discr_loss.values())) + \
+                              tf.add_n(list(self.input_photo_discr_loss.values())) + \
+                              tf.add_n(list(self.output_photo_discr_loss.values()))
 
             # Compute discriminator accuracies.
             self.input_painting_discr_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.zeros_like(pred)),
@@ -163,9 +149,9 @@ class Artgan(object):
                                                                        dtype=tf.float32)) * scale_weight[key]
                                            for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                 self.output_photo_discr_predictions.values())}
-            self.discr_acc = (tf.add_n(self.input_painting_discr_acc.values()) + \
-                              tf.add_n(self.input_photo_discr_acc.values()) + \
-                              tf.add_n(self.output_photo_discr_acc.values())) / float(len(scale_weight.keys())*3)
+            self.discr_acc = (tf.add_n(list(self.input_painting_discr_acc.values())) + \
+                              tf.add_n(list(self.input_photo_discr_acc.values())) + \
+                              tf.add_n(list(self.output_photo_discr_acc.values()))) / float(len(scale_weight.keys())*3)
 
 
             # Generator.
@@ -174,7 +160,7 @@ class Artgan(object):
                                             for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                  self.output_photo_discr_predictions.values())}
 
-            self.gener_loss = tf.add_n(self.output_photo_gener_loss.values())
+            self.gener_loss = tf.add_n(list(self.output_photo_gener_loss.values()))
 
             # Compute generator accuracies.
             self.output_photo_gener_acc = {key: tf.reduce_mean(tf.cast(x=(pred > tf.zeros_like(pred)),
@@ -182,7 +168,7 @@ class Artgan(object):
                                            for key, pred in zip(self.output_photo_discr_predictions.keys(),
                                                                 self.output_photo_discr_predictions.values())}
 
-            self.gener_acc = tf.add_n(self.output_photo_gener_acc.values()) / float(len(scale_weight.keys()))
+            self.gener_acc = tf.add_n(list(self.output_photo_gener_acc.values())) / float(len(scale_weight.keys()))
 
 
             # Image loss.
