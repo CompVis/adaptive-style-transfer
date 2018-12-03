@@ -1,3 +1,20 @@
+# Copyright (C) 2018  Artsiom Sanakoyeu and Dmytro Kotovenko
+#
+# This file is part of Adaptive Style Transfer
+#
+# Adaptive Style Transfer is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# Adaptive Style Transfer is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import numpy as np
 import scipy.misc
 import cv2
@@ -18,7 +35,7 @@ class Augmentor():
                  vertical_flip_prb=0.5):
 
         self.crop_size = crop_size
-        
+
         self.scale_augm_prb = scale_augm_prb
         self.scale_augm_range = scale_augm_range
 

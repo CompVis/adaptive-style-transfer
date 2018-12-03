@@ -1,3 +1,20 @@
+# Copyright (C) 2018  Artsiom Sanakoyeu and Dmytro Kotovenko
+#
+# This file is part of Adaptive Style Transfer
+#
+# Adaptive Style Transfer is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# Adaptive Style Transfer is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 from __future__ import division
 from ops import *
 
@@ -150,7 +167,7 @@ def discriminator(image, options, reuse=True, name="discriminator"):
 
         return {"scale_0": h0_pred,
                 "scale_1": h1_pred,
-                "scale_3": h3_pred, 
+                "scale_3": h3_pred,
                 "scale_5": h5_pred,
                 "scale_6": h6_pred}
 
@@ -174,7 +191,7 @@ def sce_criterion(logits, labels):
 def reduce_spatial_dim(input_tensor):
     """
     Since labels and discriminator outputs are of different shapes (and even ranks)
-    we should write a routine to deal with that. 
+    we should write a routine to deal with that.
     Args:
         input: tensor of shape [batch_size, spatial_resol_1, spatial_resol_2, depth]
     Returns:
