@@ -16,6 +16,8 @@ Please click on the image for a [high-res version](https://compvis.github.io/ada
 - PIL, numpy, scipy
 - tqdm
 
+*Also tested in `python3.6 + tensorflow 1.12.0`*
+
 ## Inference 
 #### Simplest van Gogh example
 To launch the inference on van Gogh style:
