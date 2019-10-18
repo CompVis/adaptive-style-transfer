@@ -525,9 +525,9 @@ class Artgan(object):
 
     def load(self, checkpoint_dir, ckpt_nmbr=None):
         if ckpt_nmbr:
-            if len([x for x in os.listdir(checkpoint_dir) if str(ckpt_nmbr) in x]) > 0:
+            if len([x for x in os.listdir(checkpoint_dir) if ("ckpt-" + str(ckpt_nmbr)) in x]) > 0:
                 print(" [*] Reading checkpoint %d from folder %s." % (ckpt_nmbr, checkpoint_dir))
-                ckpt_name = [x for x in os.listdir(checkpoint_dir) if str(ckpt_nmbr) in x][0]
+                ckpt_name = [x for x in os.listdir(checkpoint_dir) if ("ckpt-" + str(ckpt_nmbr)) in x][0]
                 ckpt_name = '.'.join(ckpt_name.split('.')[:-1])
                 self.initial_step = ckpt_nmbr
                 print("Load checkpoint %s. Initial step: %s." % (ckpt_name, self.initial_step))
