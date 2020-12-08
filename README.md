@@ -122,10 +122,12 @@ ffmpeg -i image-%04d_stylized.jpg kktie-out.mp4
 
 If you use this code or data, please cite the paper:
 ```
-@conference{sanakoyeu2018styleaware,
+@inproceedings{sanakoyeu2018styleaware,
   title={A Style-Aware Content Loss for Real-time HD Style Transfer},
-  author={Sanakoyeu, Artsiom, and Kotovenko, Dmytro, and Lang, Sabine, and Ommer, Bj\"orn},
+  author={Sanakoyeu, Artsiom and Kotovenko, Dmytro and Lang, Sabine and Ommer, Bj{\"o}rn},
   booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={698--714},
+  month = 10,
   year={2018}
 }
 ```
