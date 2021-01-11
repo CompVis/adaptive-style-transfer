@@ -67,7 +67,7 @@ Jackson Pollock,
 Nicholal Roerich (_Николай Рерих_),  
 Vincent van Gogh.   
 
-**Download pretrained models:** [link](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/XXVKT5grAquXNqi).  
+**Download pretrained models:** [link](https://drive.google.com/drive/folders/1SrWcmpZXXZ2gh821a0MUApNKO8Rm69ku?usp=sharing).  
 Extract models to the folder `./models/`. 
 
     
@@ -84,7 +84,7 @@ Style images used for training the aforementioned models: [download link](https:
 cloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf).    
 Query style examples used to collect style images: [query_style_images.tar.gz](https://yadi.sk/d/5sormJouqyuI4A).
 
-- For example, Vincent van Gogh style: [vincent-van-gogh_road-with-cypresses-1890.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=vincent-van-gogh_road-with-cypresses-1890.tar.gz).  
+- For example, Vincent van Gogh style: [vincent-van-gogh_road-with-cypresses-1890.tar.gz](https://drive.google.com/file/d/1Ld-Xwx7qZpB1MHuLgnx8SD13gDdmZqnD/view?usp=sharing).  
 This is the dataset representing a particular artistic period of Vincent van Gogh and was automatically collected using "Road with Cypress and Star, 1890" painting as query.
 
 
