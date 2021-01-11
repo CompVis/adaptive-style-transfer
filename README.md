@@ -21,8 +21,8 @@ Please click on the image for a [high-res version](https://compvis.github.io/ada
 ## Inference 
 #### Simplest van Gogh example
 To launch the inference on van Gogh style:
-1. Download the pretrained model [model_van-gogh_ckpt.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/XXVKT5grAquXNqi) 
-2. Download sample [photographs](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf).  
+1. Download the pretrained model [model_van-gogh_ckpt.tar.gz](https://drive.google.com/file/d/1JDLRlCsiEt4wrV1eGUkeq_j89WasilvR/view?usp=sharing) 
+2. Download sample [photographs](https://drive.google.com/file/d/1BqTzKKCCJ3W778hPddiv8_4WyELChzxo/view?usp=sharing).  
 3. Extract the model to `./models/` folder and sample photographs to `./data/` folder.  
 4. Run the following command:
 ```
@@ -75,7 +75,13 @@ Extract models to the folder `./models/`.
 
 Content images used for training: [Places365-Standard high-res train mages (105GB)](http://data.csail.mit.edu/places/places365/train_large_places365standard.tar).  
 
-Style images used for training the aforementioned models: [download link](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf).    
+Style images used for training the aforementioned models: [download link](https://
+
+
+
+
+
+cloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf).    
 Query style examples used to collect style images: [query_style_images.tar.gz](https://yadi.sk/d/5sormJouqyuI4A).
 
 - For example, Vincent van Gogh style: [vincent-van-gogh_road-with-cypresses-1890.tar.gz](https://hcicloud.iwr.uni-heidelberg.de/index.php/s/NcJj2oLBTYuT1tf/download?path=%2F&files=vincent-van-gogh_road-with-cypresses-1890.tar.gz).  
