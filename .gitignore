@@ -108,3 +108,39 @@ venv.bak/
 models
 logs
 evaluation/evaluation_data
+
+# Testing artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Claude settings
+.claude/*
+
+# Poetry
+# Note: poetry.lock should be committed to version control
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+virtualenv/
